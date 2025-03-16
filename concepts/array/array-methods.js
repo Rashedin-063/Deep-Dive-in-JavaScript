@@ -24,13 +24,22 @@ numbers.forEach((num) => console.log(num * 2)); // 20, 50, 80, 110 (the differen
 console.log(users.find((user) => user.id === 2)); // { id: 2, name: "Bob" }
 
 // 7. some()
-console.log(numbers.some((num) => num > 50)); // true
+console.log(numbers.some((num) => num > 50)); // true (will return true if any of the value matches the condition)
 
 // 8. every()
-console.log(numbers.every((num) => num > 5)); // true
+console.log(numbers.every((num) => num > 5)); // true (will return true if every one of the values matches the condition)
 
 // 9. sort()
 console.log(numbers.sort((a, b) => a - b)); // [10, 25, 40, 55]
+console.log(numbers.sort((a, b) => b - a)); // [44, 40, 25, 10]
+
+/**
+ * If the result of a - b (or b - a) is greater than 0 (positive), the order of the elements is reversed, meaning b is placed before a.
+ 
+ * If the result of a - b (or b - a) is less than 0 (negative), the order remains as is, meaning a is placed before b.
+
+ * If the result of the comparison is 0, the order of a and b remains unchanged relative to each other.
+ */
 
 // 10. flatMap()
 console.log(words.flatMap((word) => word.split('')));
