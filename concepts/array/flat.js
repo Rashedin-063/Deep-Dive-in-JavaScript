@@ -2,7 +2,8 @@ const nested = [1, 2, [3, 4], [5, 6]];
 
 const flatArr = nested.flat()
 
-// console.log(flatArr);
+console.log(flatArr);
+// [ 1, 2, 3, 4, 5, 6 ]
 
 const deep = [1, [2, [3, [4]]]];
 
